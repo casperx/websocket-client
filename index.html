@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebSocket Client</title>
+    <!-- prevent mobile browser from zooming in when user use input -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <style>
+@import url('./theme.css');
+@import url('./app.css');
+    </style>
+  </head>
+
+  <body>
+    <div class="flex flex-column gap-block padded" id="container">
+      <div class="flex justify-between items-baseline">
+        <b>Endpoint</b>
+        <div id="state">Closed</div>
+        <button id="toggle" type="button">Open</button>
+      </div>
+      <input type="text" id="ep" placeholder="WebSocket Endpoint" required />
+      <div class="flex gap-inline flex-expand flex-fit">
+        <div class="flex flex-column gap-block" id="input">
+          <div class="flex items-baseline justify-between">
+            <b>Data</b>
+            <button id="send" type="button" disabled autocomplete="off">Send</button>
+          </div>
+          <textarea class="flex-expand" id="data" placeholder="Data to send"></textarea>
+        </div>
+        <div class="flex flex-column flex-fit gap-block" id="result">
+          <div class="flex gap-inline items-baseline justify-between">
+            <b>Log</b>
+            <div>
+              <input type="checkbox" id="clean" />
+              <label for="clean">Clear on Open</label>
+            </div>
+            <div>
+              <input type="checkbox" id="scroll" />
+              <label for="scroll">Auto scroll</label>
+            </div>
+            <button id="clear" type="button">Clear</button>
+          </div>
+          <div class="flex flex-column flex-expand flex-fit gap-block bordered padded" id="log"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="template">
+      <div class="flex items-baseline entry">
+        <div class="datetime">Date Time</div>
+        <div class="type">Type</div>
+        <div class="data">Data</div>
+      </div>
+    </template>
+
+    <script type="module">
+import './app.js'
+    </script>
+  </body>
+</html>

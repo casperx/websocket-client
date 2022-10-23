@@ -1,0 +1,63 @@
+/* container full height */
+html,
+body,
+#container {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* specific layouts */
+#input {
+  flex-grow: 1;
+}
+
+#result {
+  flex-grow: 4;
+}
+
+#log {
+  overflow-y: scroll;
+}
+
+#data {
+  resize: none;
+}
+
+/* log entry */
+.entry {
+  column-gap: 8px;
+}
+
+/* entry separate line */
+.entry + .entry {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+/* entry date time */
+.entry > .datetime {
+  flex-shrink: 0;
+}
+
+/* entry type */
+.entry > .type {
+  flex-shrink: 0;
+  flex-basis: 52px;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+/* entry data */
+.entry > .data {
+  align-self: baseline;
+
+  font-size: 1em;
+  font-family: monospace;
+
+  white-space: pre-wrap;
+  word-break: break-all;
+}

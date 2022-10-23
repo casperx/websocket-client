@@ -1,0 +1,101 @@
+/* style system */
+:root {
+  --spacing: 5px;
+  --radius: 4px;
+}
+
+/* simple reseter */
+html {
+  color-scheme: dark light;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* input styles */
+button,
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  padding: var(--spacing);
+}
+
+label,
+button,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* button styles */
+button {
+  padding-block: calc(var(--spacing) - 0.125em);
+  padding-inline: calc(var(--spacing) + 0.125em);
+}
+
+/* utility classes */
+.hidden {
+  display: none;
+}
+
+.bordered {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--radius);
+}
+
+.padded {
+  padding: var(--spacing);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-expand {
+  flex-grow: 1;
+}
+
+.flex-fit {
+  flex-basis: 0;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-block {
+  row-gap: var(--spacing);
+}
+
+.gap-inline {
+  column-gap: var(--spacing);
+}
