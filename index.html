@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>WebSocket Client</title>
     <!-- prevent mobile browser from zooming in when user use input -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <meta charset="utf-8">
+    <title>WebSocket Client</title>
     <style>
 @import url('./theme.css');
 @import url('./app.css');
     </style>
+    <script type="module">
+import './app.js'
+    </script>
   </head>
 
   <body>
@@ -52,9 +55,5 @@
         <div class="data">Data</div>
       </div>
     </template>
-
-    <script type="module">
-import './app.js'
-    </script>
   </body>
 </html>
